@@ -29,4 +29,14 @@ public class MinIntHeap {
         }
     }
 
+    private int peek(){
+        if(size == 0) throw new IllegalStateException();
+        return itemsp[0];
+    }
+
+    private int poll (){
+        if(size == 0) throw new IllegalStateException();
+        return item;
+    }
+
 }
