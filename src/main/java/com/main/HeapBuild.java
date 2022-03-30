@@ -16,4 +16,17 @@ public class MinIntHeap {
     private int rightChild(int index){return items [getRightChildIndex(index)];}
     private int leftChild(int index){return items [getParentIndex(index)];}
 
+    private void swap (int indexOne, int indexTwo){
+        int temp = items[indexOne];
+        items[indexOne] = items [indexTwo];
+        items[indexTwo] = temp;
+    }
+
+    private void ensureExtraCapacity(){
+        if(size == capacity) {
+            items = Arrays.copyOf(items, capacity * 2);
+            capacity *= 2;
+        }
+    }
+
 }
