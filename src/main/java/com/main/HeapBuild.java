@@ -36,6 +36,10 @@ public class MinIntHeap {
 
     private int poll (){
         if(size == 0) throw new IllegalStateException();
+        int item = items[0];
+        items[0] = items[size -1 ];
+        size--;
+        heapifyDown();
         return item;
     }
 
